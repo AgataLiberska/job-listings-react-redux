@@ -1,9 +1,11 @@
 import React from 'react';
+import JobList from './JobList';
 
 const App = () => {
     return (
         <div>
-            App
+            Hello
+            <JobList />
         </div>
     )
 }
