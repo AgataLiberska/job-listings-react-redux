@@ -1,8 +1,8 @@
-[
+const jobListings = [
   {
     "id": 1,
     "company": "Photosnap",
-    "logo": "../images/photosnap.svg",
+    "logo": require("./images/photosnap.svg").default,
     "new": true,
     "featured": true,
     "position": "Senior Frontend Developer",
@@ -21,7 +21,7 @@
   {
     "id": 2,
     "company": "Manage",
-    "logo": "./images/manage.svg",
+    "logo": require("./images/manage.svg").default,
     "new": true,
     "featured": true,
     "position": "Fullstack Developer",
@@ -40,7 +40,7 @@
   {
     "id": 3,
     "company": "Account",
-    "logo": "./images/account.svg",
+    "logo": require("./images/account.svg").default,
     "new": true,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -60,7 +60,7 @@
   {
     "id": 4,
     "company": "MyHome",
-    "logo": "./images/myhome.svg",
+    "logo": require("./images/myhome.svg").default,
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -78,7 +78,7 @@
   {
     "id": 5,
     "company": "Loop Studios",
-    "logo": "./images/loop-studios.svg",
+    "logo": require("./images/loop-studios.svg").default,
     "new": false,
     "featured": false,
     "position": "Software Engineer",
@@ -98,7 +98,7 @@
   {
     "id": 6,
     "company": "FaceIt",
-    "logo": "./images/faceit.svg",
+    "logo": require("./images/faceit.svg").default,
     "new": false,
     "featured": false,
     "position": "Junior Backend Developer",
@@ -117,7 +117,7 @@
   {
     "id": 7,
     "company": "Shortly",
-    "logo": "./images/shortly.svg",
+    "logo": require("./images/shortly.svg").default,
     "new": false,
     "featured": false,
     "position": "Junior Developer",
@@ -137,7 +137,7 @@
   {
     "id": 8,
     "company": "Insure",
-    "logo": "./images/insure.svg",
+    "logo": require("./images/insure.svg").default,
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -157,7 +157,7 @@
   {
     "id": 9,
     "company": "Eyecam Co.",
-    "logo": "./images/eyecam-co.svg",
+    "logo": require("./images/eyecam-co.svg").default,
     "new": false,
     "featured": false,
     "position": "Full Stack Engineer",
@@ -177,7 +177,7 @@
   {
     "id": 10,
     "company": "The Air Filter Company",
-    "logo": "./images/the-air-filter-company.svg",
+    "logo": require("./images/the-air-filter-company.svg").default,
     "new": false,
     "featured": false,
     "position": "Front-end Dev",
@@ -195,3 +195,5 @@
     ]
   }
 ]
+
+export default jobListings;

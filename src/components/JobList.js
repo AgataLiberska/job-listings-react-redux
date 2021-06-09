@@ -6,7 +6,7 @@ class JobList extends React.Component {
         return (
             this.props.jobs.map(job => {
                 return (
-                    <div key={job.id}>
+                    <li key={job.id}>
                         <div>
                             <img src={job.logo} alt="company logo"/>
                         </div>
@@ -31,7 +31,7 @@ class JobList extends React.Component {
                             { job.languages ? job.languages.map(language => (<span>{language}</span>)) : null }
                             { job.tools ? job.tools.map(tool => (<span>{tool}</span>)) : null }
                         </div>
-                    </div>
+                    </li>
                 );
             })
         );
@@ -39,9 +39,9 @@ class JobList extends React.Component {
 
     render() {
         return (
-            <div>
+            <ul>
                 {this.renderJobs()}
-            </div>
+            </ul>
         )
     }
 }
