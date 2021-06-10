@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { addFilter } from '../actions';
 import { 
     JobListWrapper,       
     JobListContainer, 
@@ -39,10 +40,24 @@ class JobList extends React.Component {
                             </div>
                         </JobInfo>
                         <JobFilterContainer>
-                            <JobFilter>{job.role}</JobFilter>
-                            <JobFilter>{job.level}</JobFilter>
-                            { job.languages ? job.languages.map(language => (<JobFilter>{language}</JobFilter>)) : null }
-                            { job.tools ? job.tools.map(tool => (<JobFilter>{tool}</JobFilter>)) : null }
+                            <JobFilter onClick={() => this.props.addFilter(job.role)}>
+                                {job.role}
+                            </JobFilter>
+                            <JobFilter onClick={() => this.props.addFilter(job.level)}>
+                                {job.level}
+                            </JobFilter>
+                            { job.languages ? 
+                                job.languages.map(language => (
+                                <JobFilter onClick={() => this.props.addFilter(language)}>
+                                    {language}
+                                </JobFilter>))
+                                : null }
+                            { job.tools ? 
+                                job.tools.map(tool => (
+                                <JobFilter onClick={() => this.props.addFilter(tool)}>
+                                    {tool}
+                                </JobFilter>)) 
+                                : null }
                         </JobFilterContainer>
                     </JobCard>
                 );
@@ -65,4 +80,4 @@ const mapStateToProps = (state) => {
     return { jobs: state.jobs }
 }
 
-export default connect(mapStateToProps, {})(JobList);
+export default connect(mapStateToProps, { addFilter })(JobList);
