@@ -11,3 +11,9 @@ export const removeFilter = filter => {
         payload: filter
     }
 }
+
+export const removeAllFilters = () => {
+    return {
+        type: 'REMOVE_ALL_FILTERS'
+    }
+}

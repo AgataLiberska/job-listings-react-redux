@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { removeFilter } from '../actions';
+import { removeFilter, removeAllFilters } from '../actions';
 import {
     FilterListWrapper,
     FilterListContainer,
@@ -32,7 +32,7 @@ class FilterList extends React.Component {
                     <FiltersWrapper>
                         {this.renderFilters()}
                     </FiltersWrapper>
-                    <ClearFilters>Clear</ClearFilters>
+                    <ClearFilters onClick={()=> this.props.removeAllFilters()}>Clear</ClearFilters>
                 </FilterListContainer>
             </FilterListWrapper>
         )
@@ -43,4 +43,4 @@ const mapStateToProps = state => {
     return { filters: state.filters }
 }
 
-export default connect(mapStateToProps, { removeFilter })(FilterList);
+export default connect(mapStateToProps, { removeFilter, removeAllFilters })(FilterList);

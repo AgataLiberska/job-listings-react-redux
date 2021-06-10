@@ -1,5 +1,4 @@
 const filtersReducer = (filters = [], action) => {
-    console.log(filters);
     switch(action.type) {
         case 'ADD_FILTER':
             if (filters.includes(action.payload)) {
@@ -9,6 +8,8 @@ const filtersReducer = (filters = [], action) => {
             };
         case 'REMOVE_FILTER':
             return filters.filter(filter => filter !== action.payload);
+        case 'REMOVE_ALL_FILTERS':
+            return [];
         default:
             return filters;
     }
