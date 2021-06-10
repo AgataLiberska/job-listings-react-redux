@@ -2,7 +2,11 @@ const filtersReducer = (filters = [], action) => {
     console.log(filters);
     switch(action.type) {
         case 'ADD_FILTER':
-            return [...filters, action.payload];
+            if (filters.includes(action.payload)) {
+                return filters;
+            } else {
+                return [...filters, action.payload];
+            }
         default:
             return filters;
     }
