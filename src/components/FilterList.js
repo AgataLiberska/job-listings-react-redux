@@ -4,11 +4,22 @@ import {
     FilterListWrapper,
     FilterListContainer,
     FiltersWrapper,
+    Filter,
     ClearFilters
-
 } from './FilterListElements';
 
 class FilterList extends React.Component {
+    renderFilters() {
+        return (
+            this.props.filters.map(filter => {
+                return (
+                    <Filter >{filter}</Filter>
+                )
+            })
+        )
+    }
+
+
     render() {
         if (this.props.filters.length === 0) {
             return null;
@@ -18,7 +29,7 @@ class FilterList extends React.Component {
             <FilterListWrapper>
                 <FilterListContainer>
                     <FiltersWrapper>
-
+                        {this.renderFilters()}
                     </FiltersWrapper>
                     <ClearFilters>Clear</ClearFilters>
                 </FilterListContainer>
