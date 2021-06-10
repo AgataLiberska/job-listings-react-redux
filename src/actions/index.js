@@ -4,3 +4,10 @@ export const addFilter = filter => {
         payload: filter
     }
 }
+
+export const removeFilter = filter => {
+    return {
+        type: 'REMOVE_FILTER',
+        payload: filter
+    }
+}

@@ -6,7 +6,9 @@ const filtersReducer = (filters = [], action) => {
                 return filters;
             } else {
                 return [...filters, action.payload];
-            }
+            };
+        case 'REMOVE_FILTER':
+            return filters.filter(filter => filter !== action.payload);
         default:
             return filters;
     }
