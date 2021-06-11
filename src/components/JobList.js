@@ -22,7 +22,7 @@ class JobList extends React.Component {
         return (
             this.props.jobs.map(job => {
                 return (
-                    <JobCard key={job.id}>
+                    <JobCard key={job.id.toString()}>
                         <JobLogo src={job.logo} alt="company logo"/>
                         <JobInfo>
                             <JobIntro>

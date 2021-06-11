@@ -14,7 +14,7 @@ class FilterList extends React.Component {
         return (
             this.props.filters.map(filter => {
                 return (
-                    <Filter onClick={() => this.props.removeFilter(filter)}>{filter}</Filter>
+                    <Filter key={filter} onClick={() => this.props.removeFilter(filter)}>{filter}</Filter>
                 )
             })
         )

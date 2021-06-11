@@ -1,7 +1,8 @@
 import jobListings from '../jobListings';
 
-const jobsReducer = (jobs = jobListings) => {
-    return jobs;
+const jobsReducer = (state) => {
+    console.log(state);
+    return jobListings;
 }
 
 export default jobsReducer;
