@@ -17,10 +17,3 @@ export const removeAllFilters = () => {
         type: 'REMOVE_ALL_FILTERS'
     }
 }
-
-// export const addFilterAndUpdateJobs = (dispatch, getState) => {
-//     dispatch(addFilter());
-
-//     const filters = getState().filters;
-
-// }
